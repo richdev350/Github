@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  userName = 'Sivasankar5366210433';
+  userName = 'bigstar888';
 
   constructor(private route: Router) {}
 
@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
     if (this.userName) {
       this.route.navigateByUrl(`/repositories/${this.userName}`);
     } else {
-      this.route.navigateByUrl(`/repositories/Sivasankar5366210433`);
+      this.route.navigateByUrl(`/repositories/bigstar888`);
     }
   }
 }

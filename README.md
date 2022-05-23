@@ -1,27 +1,14 @@
-# GitHub
+Run Instruction:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+Step 1: Run all the four command one by one
 
-## Development server
+        git clone https://github.com/Sivasankar5366210433/gitHub.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+        cd gitHub
 
-## Code scaffolding
+        npm i
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+        ng serve
+Step 2: In the First screen as shown in Step2.png you can provide your own user name or click next with the default username(bigstar888) or leave the field blank and click next to automatically select the default username
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Step 3: In the Second screen as shown in Step3.png you will be seeing the list of all the repositories avaliable for the given username. You can click on any row to view the corresponding commits of the repositories as shown in the Step4.png .In order to go with the default project you can click on the repositories gitHub repository.
