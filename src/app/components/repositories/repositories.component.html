@@ -1,26 +1,33 @@
 <div class="card text-center center" style="width: fit-content">
-    <div class="card-body">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                  <th scope="col">Repository Name</th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Default Branch</th>
-                  <th scope="col">Created On</th>
-                  <th scope="col">Updated On</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let val of myrepo" (click)="selectRepo(val.name)">
-                  <th>{{val.name}}</th>
-                  <td>{{val.private}}</td>
-                  <td>{{val.default_branch}}</td>
-                  <td>{{val.created_at}}</td>
-                  <td>{{val.updated_at}}</td>
-                </tr>
-               
-              </tbody>
-          </table>
+  <div class="card-body">
+    <h5 class="card-title">Repositories</h5>
+    <div *ngIf="myrepo.length>0">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Repository Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default Branch</th>
+            <th scope="col">Created On</th>
+            <th scope="col">Updated On</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let val of myrepo" (click)="selectRepo(val.name)">
+            <th>{{val.name}}</th>
+            <td><span class="badge bg-success" *ngIf="!val.private">Public</span><span class="badge bg-danger"
+                *ngIf="val.private">Private</span></td>
+            <td>{{val.default_branch}}</td>
+            <td>{{val.created_at | date}}</td>
+            <td>{{val.updated_at | date}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <div *ngIf="myrepo.length<=0">
+      No Repositories Found
+    </div>
+
+  </div>
 
 </div>

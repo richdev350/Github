@@ -14,16 +14,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     UserComponent,
     RepositoriesComponent,
-    CommitsComponent
+    CommitsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
