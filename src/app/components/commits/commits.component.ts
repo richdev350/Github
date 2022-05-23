@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from 'src/common/data.service';
 
 @Component({
   selector: 'app-commits',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commits.component.css']
 })
 export class CommitsComponent implements OnInit {
-
-  constructor() { }
+  mycommits : any
+  constructor(private activeRoute : ActivatedRoute,private dataService : DataService) { }
 
   ngOnInit(): void {
+    this.activeRoute.params.subscribe(res=>{
+      this.dataService.getCommits(res.userName,res.repoName).subscribe(resp=>{
+        console.log(resp)
+        this.mycommits = resp
+      })
+    })
   }
 
 }
