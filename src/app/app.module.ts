@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { RepositoriesComponent } from './components/repositories/repositories.component';
 import { CommitsComponent } from './components/commits/commits.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { CommitsComponent } from './components/commits/commits.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

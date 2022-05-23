@@ -1,1 +1,19 @@
-<p>user works!</p>
+<div class="card text-center center" style="width: 20rem;">
+    <div class="card-body">
+        <h5 class="card-title">User Name</h5>
+        <p class="card-text">Please provide your GitHub User Name.</p>
+        <div class="input-group flex-nowrap">
+            <input type="text" [(ngModel)]="userName" class="form-control" placeholder="Username" aria-label="Username"
+                aria-describedby="addon-wrapping">
+        </div>
+        <br>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success" (click)="goToRepoPage()">Next</button>
+        </div>
+    </div>
+
+</div>
+<div style="text-align: center;margin-top:35%">
+    <h6>Note: You can proceed with the default username or leave the field blank and click on next to procced with
+        default User Name</h6>
+</div>
